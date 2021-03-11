@@ -32,7 +32,7 @@ and a second to launch this attack from a source spoofed attacker.
 Note that to prevent abuse, this code is *not* useful to launch this attack at scale: these
 scripts are for testing small-scale attacks and to reproduce the results in our paper.
 
-### 👷 Set up
+### 🏗 Set up
 
 Just install the dependencies and you're good to go. 
 ```
@@ -146,3 +146,13 @@ optional arguments:
                         instead of launching the attack, perform an sp3 traceroute
   --sp3 SP3             The URI IP:port of the sp3 server
 ```
+
+## 👷 Contributors
+
+[Kevin Bock](https://www.cs.umd.edu/~kbock/)
+
+[Pranav Bharadwaj](https://github.com/pbokc)
+
+[Jasraj Singh](https://github.com/jasrajsingh1)
+
+[Dave Levin](https://www.cs.umd.edu/~dml/)
