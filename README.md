@@ -30,7 +30,7 @@ There are two scripts in this repository: one for triggering and identifying res
 and a second to launch this attack from a source spoofed attacker.
 
 Note that to prevent abuse, this code is *not* useful to launch this attack at scale: these
-scripts are for testing small-scale attakcs and to reproduce the results in our paper.
+scripts are for testing small-scale attacks and to reproduce the results in our paper.
 
 ### 👷 Set up
 
