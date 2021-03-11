@@ -3,7 +3,7 @@
 Repository for scripts for the WOOT 2021 paper: "Your Censor is My Censor: Weaponizing
 Censorship Infrastructure for Availability Attacks".
 
-## Abstract
+## 📝 Abstract
 
 Nationwide Internet censorship threatens free and open access to communication and information
 for millions of users living inside of censoring regimes. In this paper, we show that this poses
@@ -18,13 +18,13 @@ of residual censorship, and another to actually launch the attack (against machi
 We show that the attack can be launched despite stateful TCP tracking used by many censors, and
 that it also works against those who censor by null-routing. Our code is publicly available.
 
-## Disclaimer
+## ⚠️ Disclaimer 
 
 These scripts will _intentionally_ trigger censorship responses with malformed or
 non-protocol-compliant packet sequences that are detectable on the network. These scripts do not
 provide any anonyminity. Understand the risks of testing them before doing so.
 
-## Try it
+## 🏃 Try it
 
 There are two scripts in this repository: one for triggering and identifying residual censorship
 and a second to launch this attack from a source spoofed attacker.
@@ -32,7 +32,7 @@ and a second to launch this attack from a source spoofed attacker.
 Note that to prevent abuse, this code is *not* useful to launch this attack at scale: these
 scripts are for testing small-scale attakcs and to reproduce the results in our paper.
 
-### Set up
+### 👷 Set up
 
 Just install the dependencies and you're good to go. 
 ```
@@ -42,7 +42,7 @@ python3 -m pip install -r requirements.txt
 Before using the residual censorship scanner script, ensure that outbound `RST` packets are
 being dropped. You can use the `drop_outbound_rsts.sh` script for this. 
 
-### Identifying Abuseable Residual Censorship
+### 🕵️ Identifying Abuseable Residual Censorship
 
 The `residual_censorship_scanner.py` script is used to identify abusable four-tuple residual
 censorship (null-routing). The script is designed to be run from a client (located either inside
@@ -103,7 +103,7 @@ Abusable residual censorship detected.
 This script can also be used to determine the duration of time residual censorship lasts with `--determine-duration`.
 
 
-### Source IP Address Spoofing: Launching the Attack
+### 🚀 Source IP Address Spoofing: Launching the Attack
 
 To test launching the attack against yourself, you can use `sp3_send.py`. This relies on a
 public instance of the amazing (SP)^3 project (see https://github.com/willscott/sp3). SP3 is a
