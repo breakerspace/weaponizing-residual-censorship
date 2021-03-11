@@ -1,0 +1,6 @@
+scapy==2.4.3
+ansicolors
+websockets
+netifaces
+scp
+requests
