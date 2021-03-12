@@ -55,7 +55,7 @@ def test_echo_server(dest_ip, dest_port):
     print(colors.color(" done.", fg="green"))
 
 
-def get_answer(answers, expected_flags="PA", expected_seqno=None):
+def get_answer(answers, expected_flags="PA", expected_seqno=None, expected_ackno=None):
     """
     Helper script to parse through a list of potential answers to find the
     actual response packet we care about. Scapy normally does much of this
@@ -65,6 +65,7 @@ def get_answer(answers, expected_flags="PA", expected_seqno=None):
         answers (list): List of answer packets tuples from `sr`
         expected_flags (str, optional): TCP flags on the expected packet
         expected_seqno (int, optional): Sequence number on the expected packet
+        expected_ackno (int, optional): Acknowledgment number on the expected packet
     """
     print("Parsing answer out of %d potential answers" % len(answers))
     for packet in answers:
@@ -76,6 +77,9 @@ def get_answer(answers, expected_flags="PA", expected_seqno=None):
             continue
         if expected_seqno is not None and packet["TCP"].seq != expected_seqno:
             print("Ignoring packet with unexpected seqno %d (expected: %d)" % (packet["TCP"].seq, expected_seqno), packet.summary())
+            continue
+        if expected_ackno is not None and packet["TCP"].ack != expected_ackno:
+            print("Ignoring packet with unexpected ackno %d (expected: %d)" % (packet["TCP"].ack, expected_ackno), packet.summary())
             continue
         return packet
     return None 
@@ -208,18 +212,20 @@ def test_innocuous_query(dest_ip, dest_port, host_header="youporn.com", sleep_ti
         # pull out the one most likely to be the one we care about. First, figure out
         # the expected response from the server (assuming no censorship) given our test config
         expected_seqno = ackno
+        expected_ackno = None
         if test_flags == "PA" and not one_way:
             expected_flags = "PA"
         elif test_flags == "PA" and one_way:
             expected_flags = "R"
             expected_seqno = ackno
         elif test_flags == "S" and one_way:
-            expected_flags = "SA"
+            expected_flags = "RA"
             expected_seqno = None
+            expected_ackno = seqno + 1
         elif test_flags == "S" and not one_way:
             expected_flags = "A"
             expected_seqno = None
-        answer = get_answer(answers, expected_flags=expected_flags, expected_seqno=expected_seqno)
+        answer = get_answer(answers, expected_flags=expected_flags, expected_seqno=expected_seqno, expected_ackno=expected_ackno)
         if answer:
             break
 
