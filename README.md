@@ -156,3 +156,5 @@ optional arguments:
 [Jasraj Singh](https://github.com/jasrajsingh1)
 
 [Dave Levin](https://www.cs.umd.edu/~dml/)
+
+[Will Scott](https://github.com/willscott)
