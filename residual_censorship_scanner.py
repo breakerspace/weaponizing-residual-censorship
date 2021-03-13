@@ -101,7 +101,6 @@ def three_way_handshake(dest_ip, dest_port, one_way=False):
     seqno = random.randint(100, 1000000)
 
     print("Starting 3-way handshake (source port %d)..." % src_port, end="")
-    #input("")
     # Craft a SYN packet 
     syn = IP(dst=dest_ip) / TCP(dport=dest_port, sport=src_port, seq=seqno, flags="S")
     if one_way:
