@@ -1,4 +1,4 @@
-# weaponizing-residual-censorship
+# weaponizing-residual-censorship [![RORR](https://img.shields.io/badge/IEEE%20Results%20Reproduced-PASSED-green.svg)](https://shields.io/) [![ORO](https://img.shields.io/badge/IEEE%20Open%20Research%20Objects-PASSED-green.svg)](https://shields.io/) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
 Repository for scripts for the WOOT 2021 paper: "Your Censor is My Censor: Weaponizing
 Censorship Infrastructure for Availability Attacks".
@@ -148,7 +148,7 @@ optional arguments:
 ```
 
 ## 👷 Contributors
-
+ 
 [Kevin Bock](https://www.cs.umd.edu/~kbock/)
 
 [Pranav Bharadwaj](https://github.com/pbokc)
@@ -158,3 +158,5 @@ optional arguments:
 [Dave Levin](https://www.cs.umd.edu/~dml/)
 
 [Will Scott](https://github.com/willscott)
+
+We would also like to thank IEEE's anonymous Artifact Evaluators for their time, effort, and dilligence in exercising these artifacts for the WOOT Artifact Evaluation. 
