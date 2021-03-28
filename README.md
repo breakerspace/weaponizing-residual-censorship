@@ -1,4 +1,4 @@
-# weaponizing-residual-censorship [![RORR](https://img.shields.io/badge/IEEE%20Results%20Reproduced%20(ROR--R)-PASSED-green.svg)](https://shields.io/) [![ORO](https://img.shields.io/badge/IEEE%20Open%20Research%20Objects%20(ORO)-PASSED-green.svg)](https://shields.io/) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+# weaponizing-residual-censorship [![RORR](https://img.shields.io/badge/IEEE%20Results%20Reproduced%20(ROR--R)-PASSED-green.svg)](https://groups.niso.org/apps/group_public/download.php/24810/RP-31-2021_Reproducibility_Badging_and_Definitions.pdf) [![ORO](https://img.shields.io/badge/IEEE%20Open%20Research%20Objects%20(ORO)-PASSED-green.svg)](https://groups.niso.org/apps/group_public/download.php/24810/RP-31-2021_Reproducibility_Badging_and_Definitions.pdf) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
 Repository for scripts for the WOOT 2021 paper: "Your Censor is My Censor: Weaponizing
 Censorship Infrastructure for Availability Attacks".
